@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="card dashboard">
+        <div class="icon">✅</div>
+        <h1>Welcome, {{ username }}!</h1>
+        <p class="subtitle">You are securely logged in.</p>
+
+        <div class="security-list">
+            <div>🔒 Password stored using bcrypt hashing</div>
+            <div>🛡️ Parameterized SQL queries</div>
+            <div>✓ Input validation enabled</div>
+            <div>🎫 Session-based authentication</div>
+        </div>
+
+        <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+</body>
+</html>
